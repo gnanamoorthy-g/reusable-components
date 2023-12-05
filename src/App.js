@@ -1,11 +1,14 @@
 import React from "react";
 import InfiniteLoader from "./components/infiniteLoader";
+import Accordion from "./components/accordion";
 
-const App = () =>{
-    return(
+const App = () => {
+    return (
         <>
-            <div>Title</div>
-            <InfiniteLoader />
+            {/* <InfiniteLoader /> */}
+            <div className="p-10">
+                <Accordion />
+            </div>
         </>
     )
 }
