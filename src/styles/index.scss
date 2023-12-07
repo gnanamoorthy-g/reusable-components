@@ -27,12 +27,12 @@
     }
 
     .rotate-up {
-        transform: rotate(-180deg);
+        transform: rotate(0deg);
         transition: transform 0.3s ease-in-out;
     }
     
     .rotate-down {
-        transform: rotate(0deg);
+        transform: rotate(180deg);
         transition: transform 0.3s ease-in-out;
     }
 
@@ -49,4 +49,8 @@
         max-height: 0;
         overflow: hidden;
     }
+}
+
+.accordion:focus{
+    outline: 2px solid black;
 }

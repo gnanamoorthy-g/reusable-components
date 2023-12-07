@@ -12,7 +12,7 @@ module.exports = {
     },
     target: 'web',
     resolve: {
-        extensions: ['.js', '.jsx', '.json'],
+        extensions: ['.ts', '.tsx','.js', '.jsx', '.json'],
     },
     devServer: {
         port: 8000,
@@ -34,6 +34,11 @@ module.exports = {
                     loader: 'babel-loader',
                 },
             },
+            {
+                test: /\.tsx?$/,
+                use: ['ts-loader'],
+                exclude: /node_modules/,
+              },
             {
                 test: /\.(css)$/,
                 use: ['style-loader','css-loader','postcss-loader']
