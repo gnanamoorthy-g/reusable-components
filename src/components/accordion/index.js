@@ -20,7 +20,7 @@ const Accordion = ({ title = DEFAULT_TITLE, content = DEFAULT_CONTENT }) => {
             containerDiv.focus();
         });
 
-        containerDiv.addEventListener('keypress',(event)=>{
+        containerDiv.addEventListener('keydown',(event)=>{
             const isActive = isElementActive(containerDiv)
             if (isActive && (event.key === KEYS.ENTER || event.key === KEYS.SPACE)) {
                 toggleAccordion();
