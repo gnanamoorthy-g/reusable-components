@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {isElementActive } from '../../utilities/domUtilFns.ts';
-import { KEYS } from '../../utilities/a11yUtils.ts'
-import PropTypes from 'prop-types';
+import { KEYS } from '../../utilities/a11yUtils.ts';
 
 
 import { DEFAULT_TITLE, DEFAULT_CONTENT } from "./utils";
@@ -46,19 +45,6 @@ const Accordion = ({ title = DEFAULT_TITLE, content = DEFAULT_CONTENT }) => {
 
         </>
     )
-}
-
-Accordion.propTypes = {
-    title: PropTypes.oneOfType([
-        PropTypes.node,
-        PropTypes.element,
-        PropTypes.elementType
-    ]),
-    content: PropTypes.oneOfType([
-        PropTypes.node,
-        PropTypes.element,
-        PropTypes.elementType
-    ]),
 }
 
 export default Accordion;
