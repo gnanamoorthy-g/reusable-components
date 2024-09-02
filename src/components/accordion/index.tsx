@@ -33,8 +33,8 @@ const Accordion = ({ title = DEFAULT_TITLE, content = DEFAULT_CONTENT }) => {
 
 
     return (
-        <>
-            <div id="accordion" className='accordion p-5' tabIndex={1}>
+        <div className="flex h-screen items-center px-6">
+          <div id="accordion" className='accordion p-5' tabIndex={1}>
                 <div id="title" className="flex justify-between cursor-pointer" onClick={toggleAccordion}>
                     <h2 className="text-xl mb-2">{title}</h2>
                     <span>
@@ -45,9 +45,7 @@ const Accordion = ({ title = DEFAULT_TITLE, content = DEFAULT_CONTENT }) => {
                 </div>
                 <div id="content" className={`${isOpened ? 'open-content' : 'closed-content'}`}>{content}</div>
             </div>
-
-
-        </>
+        </div>
     )
 }
 
